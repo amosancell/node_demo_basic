@@ -1,10 +1,10 @@
-var express    = require('express')
-var bodyParser = require('body-parser')
+var express    = require('express');
+var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var app = express()
+var app = express();
 
 // Add Connect String Here
-mongoose.connect(ADD_CONNECT_STRING_HERE)
+mongoose.connect(WOULDNT_YOU_LIKE_2_KNOW);
 
 //set up vars
 app.set('view engine','ejs');
@@ -16,5 +16,5 @@ var Cat = require('./cat')
 require('./routes')(app);
 
 app.listen(3000, () => {
-    console.log('meow')
-})
+    console.log('meow');
+});

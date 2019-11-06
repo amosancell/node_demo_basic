@@ -1,27 +1,31 @@
 <html>
 
-<head>
+  <head>
 
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css">
 
-<body>
+  </head>
 
-<a href="/addCat">Add a Cat</a>
-<br>
-Your cats:
+  <body>
 
-<table>
+    <a href="/addCat">Add a Cat</a>
+    <br>
+    Your cats:
 
-<% for(var i = 0; i<cats.length;i++) { %>
-  <tr>
-    <td><%= cats[i].name %></td>
-  </tr>
-<% } %>
+    <table>
 
-</table>
+    <% for(var i = 0; i < cats.length; i++) { %>
+      <tr>
+        <td>Name: <%= cats[i].name %></td>
+        <td>Breed: <%= cats[i].breed %></td>
+        <td>Age: <%= cats[i].age %></td>
+        <td><img src=<%= cats[i].image %> alt="image of cat" height="50" width="50"></td>
+      </tr>
+    <% } %>
 
-</body>
+    </table>
+
+  </body>
 
 
 </html>
